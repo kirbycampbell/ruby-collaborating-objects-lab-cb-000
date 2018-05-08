@@ -30,10 +30,15 @@ attr_accessor :name
    def self.find(name)
      self.all.find {|artist| artist.name == name}
    end
+
    def self.create(name)
      artist = Artist.new(name)
      artist.save
      artist
+   end
+
+   def print_songs
+     self.all
    end
 
 

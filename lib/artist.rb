@@ -11,6 +11,10 @@ attr_accessor :name, :songs
     @@all << self
   end
 
+  def self.all
+    @@all
+  end
+
   def add_song(song)
     self.songs << song
   end
@@ -37,8 +41,6 @@ attr_accessor :name, :songs
       self.songs.each {|song| song.name}
    end
 
-  def self.all
-    @@all
-  end
+
 
 end

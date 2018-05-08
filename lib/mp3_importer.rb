@@ -1,9 +1,9 @@
 class Music_importer
-  #attr_accessor :file
+  attr_accessor :path
 @@files = []
 
-  def initialize(file)
-    @file = file
+  def initialize(path)
+    @path = path
   end
 
 end

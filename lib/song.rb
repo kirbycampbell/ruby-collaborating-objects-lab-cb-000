@@ -10,7 +10,7 @@ attr_accessor :name, :artist
   end
 
   def new_by_filename(file)
-    song = Song.new(file)
+    Song.new(file)
   end
 
 end

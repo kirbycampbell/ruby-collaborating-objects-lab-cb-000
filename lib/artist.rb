@@ -19,7 +19,7 @@ attr_accessor :name
     @songs << song
   end
 
-  def find_or_create_by_name=(name)
+  def find_or_create_by_name(name)
       if self.artist != nil
           self.artist.name = name
       else

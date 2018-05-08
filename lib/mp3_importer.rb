@@ -9,9 +9,7 @@ class MP3Importer
   def files
     files = []
     Dir.new(path).each do |file|
-      if file.include?(".mp3")
-        files << file
-      end
+      files << file if file.include?(".mp3")
     end
     files
   end

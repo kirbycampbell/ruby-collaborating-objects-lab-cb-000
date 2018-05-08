@@ -9,7 +9,7 @@ attr_accessor :name, :artist, :mp3importer
     @artist
   end
 
-  def new_by_filename(file)
+  def self.new_by_filename(file)
     song = Song.new(file)
   end
 

@@ -23,7 +23,7 @@ attr_accessor :name
       if self.artist != nil
           self.artist.name = name
       else
-          nil
+          self.artist = Artist.new(name)
     end
   end
 

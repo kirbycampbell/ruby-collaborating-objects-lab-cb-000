@@ -1,5 +1,5 @@
 class Song
-attr_accessor :name, :artist, :mp3importer
+attr_accessor :name, :artist
 
   def initialize(name)
     @name = name
@@ -10,7 +10,10 @@ attr_accessor :name, :artist, :mp3importer
   end
 
   def self.new_by_filename(file)
-    song = self.new(file.split(" - ")[1])
+    song_info = file.chomp(".mp3").split(" - ")
+    song = Song.new(song_info[1])
+    song.artist_name = song_info[0]
+    song
   end
-
+end
 end

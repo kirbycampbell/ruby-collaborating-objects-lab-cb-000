@@ -15,6 +15,8 @@ attr_accessor :name
     @@all << self
   end
 
-
+  def add_song(song)
+    @songs << song
+  end
 
 end

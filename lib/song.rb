@@ -7,7 +7,7 @@ attr_accessor :name, :artist
   end
 
 #Connects new song with Artist by finding it in Artist search
-  def artist=(name)
+  def artist_name=(name)
     self.artist = Artist.find_or_create_by_name(name)
     artist.add_song(self)
   end
@@ -16,7 +16,7 @@ attr_accessor :name, :artist
   def self.new_by_filename(file)
     data_array = file.chomp(".mp3").split(" - ")
     song = Song.new(data_array[1])
-    song.artist = data_array[0]
+    song.artist_name = data_array[0]
     song
   end
 

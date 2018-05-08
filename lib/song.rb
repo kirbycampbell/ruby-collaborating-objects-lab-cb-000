@@ -8,8 +8,8 @@ attr_accessor :name, :artist
 
 #Connects new song with Artist
   def artist_name=(artist_name)
-    self.artist = artist_name
-    Artist.add_song(self)
+    self.artist = Artist.find_or_create_by_name(name)
+    artist.add_song(self)
   end
 
   def self.new_by_filename(file)

@@ -12,11 +12,11 @@ attr_accessor :name
   end
 
   def save
-    @@all << self.all
+    @@all << self
   end
 
   def add_song(song)
-    @songs << song
+    self.songs << song
   end
 
    def self.find_or_create_by_name(name)
@@ -25,6 +25,10 @@ attr_accessor :name
       else
           self.artist = Artist.new(name)
     end
+  end
+
+  def self.all
+    @@all
   end
 
 end

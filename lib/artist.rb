@@ -35,9 +35,7 @@ attr_accessor :name, :songs
 
    def print_songs
       self.songs.each {|song| song.name}
-
    end
-
 
   def self.all
     @@all

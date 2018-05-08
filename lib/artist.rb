@@ -19,7 +19,8 @@ attr_accessor :name
     @songs << song
   end
 
-  def find_or_create_by_name(name)
+  def self.find_or_create_by_name(name)
+    artist = name.split(" - ")[0]
       if self.artist != nil
           self.artist.name = name
       else

@@ -12,11 +12,19 @@ attr_accessor :name
   end
 
   def save
-    @@all << self
+    @@all << self.name
   end
 
   def add_song(song)
     @songs << song
+  end
+
+  def find_or_create_by_name=(name)
+      if self.artist != nil
+          self.artist.name = name
+      else
+          nil
+    end
   end
 
 end

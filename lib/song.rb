@@ -11,7 +11,7 @@ attr_accessor :name, :artist, :mp3importer
 
   def self.new_by_filename(file)
     song = Song.new(file)
-    song.split(" - ")[1]
+    #song.(" - ")[1]
   end
 
 end

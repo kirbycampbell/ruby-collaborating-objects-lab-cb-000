@@ -1,4 +1,4 @@
-class MP3Importer
+class Music_importer
   #attr_accessor :file
 @@files = []
 

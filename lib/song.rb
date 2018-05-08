@@ -7,7 +7,7 @@ attr_accessor :name, :artist
   end
 
 #Connects new song with Artist by finding it in Artist search
-  def artist(name)
+  def artist=(name)
     self.artist = Artist.find_or_create_by_name(name)
     artist.add_song(self)
   end

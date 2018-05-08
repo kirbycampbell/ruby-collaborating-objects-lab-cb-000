@@ -11,6 +11,7 @@ class MP3Importer
     Dir.new(path).each do |file|
       if file.include?(".mp3")
         files << file
+      end
     end
     files
   end
